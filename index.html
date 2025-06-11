@@ -6,30 +6,25 @@
     <style>
         body {
             margin: 0;
-            padding: 20px;
+            padding: 1vw 1vh;
             font-family: sans-serif;
-            background-color: #f0f0f0;
+            background-color: #000;
         }
 
         .boards-container {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-        }
-
-        @media (min-width: 800px) {
-            .boards-container {
-                flex-direction: row;
-            }
+            gap: 2vh;
         }
 
         .bingo-board {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             grid-template-rows: repeat(5, 1fr);
-            gap: 5px;
-            width: 300px;
-            height: 300px;
+            row-gap: 1vw;
+            column-gap: 1vh;
+            width: 90vw;
+            height: 45vh;
         }
 
         .bingo-button {
@@ -57,7 +52,7 @@
 
         .orange { background-color: #ff8800; }
         .green  { background-color: #00ff2e; }
-        .pink   { background-color: #ff00e4; }
+        .pink   { background-color: #ff46ed; }
         .blue   { background-color: #0df; }
         .red    { background-color: #ff1900; }
 
@@ -66,7 +61,7 @@
         }
 
         .reset-btn {
-            margin-bottom: 20px;
+            margin-top: 20px;
             padding: 10px 20px;
             font-size: 1rem;
         }
@@ -74,11 +69,11 @@
 </head>
 <body>
 
-    <button class="reset-btn" onclick="initBoards()">Reset Boards</button>
-
     <div class="boards-container" id="boardsContainer">
         <!-- Boards inserted here -->
     </div>
+
+    <button class="reset-btn" onclick="initBoards()">Reset Boards</button>
 
     <script>
         const COLORS = ["orange", "green", "red", "blue", "pink"];
