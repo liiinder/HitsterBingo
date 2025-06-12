@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Bingo</title>
     <style>
         body {
+            touch-action: manipulation;
             margin: 0;
-            padding: 1vw 1vh;
+            padding: 2dvw 2dvh;
             font-family: sans-serif;
             background-color: #000;
         }
@@ -14,17 +15,17 @@
         .boards-container {
             display: flex;
             flex-direction: column;
-            gap: 2vh;
+            gap: 6dvh;
         }
 
         .bingo-board {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             grid-template-rows: repeat(5, 1fr);
-            row-gap: 1vw;
-            column-gap: 1vh;
-            width: 90vw;
-            height: 45vh;
+            row-gap: 1dvw;
+            column-gap: 1dvh;
+            width: 96dvw;
+            height: 45dvh;
         }
 
         .bingo-button {
@@ -37,7 +38,7 @@
             position: relative;
             cursor: pointer;
         }
-
+/* 
         .bingo-button.marked::after {
             content: "✖";
             position: absolute;
@@ -48,13 +49,54 @@
             color: white;
             text-shadow: 2px 2px 5px black;
             pointer-events: none;
-        }
+        } */
+
+/*
+-------------------------------------------
+
+.bingo-button.marked::before,
+.bingo-button.marked::after {
+    content: '';
+    position: absolute;
+    inset: 25%;
+    background-color: white;
+    transform-origin: center;
+    transform: rotate(45deg);
+    pointer-events: none;
+    box-shadow: 0 0 4px black;
+    border-radius: 1px;
+}
+
+.bingo-button.marked::after {
+    transform: rotate(-45deg);
+}
+
+--------------------------------
+*/
+.bingo-button.marked::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: center/60% no-repeat;
+    background-image: url('/x.svg');
+    
+}
 
         .orange { background-color: #ff8800; }
         .green  { background-color: #00ff2e; }
         .pink   { background-color: #ff46ed; }
         .blue   { background-color: #0df; }
         .red    { background-color: #ff1900; }
+
+        .orange.marked { background-color: #ff880088; }
+        .green.marked  { background-color: #00ff2e88; }
+        .pink.marked   { background-color: #ff46ed88; }
+        .blue.marked   { background-color: #00ddff88; }
+        .red.marked    { background-color: #ff190088; }
 
         button:focus {
             outline: none;
@@ -63,6 +105,7 @@
         .reset-btn {
             margin-top: 20px;
             padding: 10px 20px;
+            width: 96dvw;
             font-size: 1rem;
         }
     </style>

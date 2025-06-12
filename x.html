@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .x-button {
+      position: relative;
+      width: 50px;       /* You can use % or vw for responsiveness */
+      height: 50px;
+      background-color: #eee;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .x-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60%;
+      height: 60%;
+      transform: translate(-50%, -50%);
+    }
+
+    .x-icon::before,
+    .x-icon::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 12%;
+      background-color: #333;
+      transform-origin: center;
+    }
+
+    .x-icon::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .x-icon::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .x-button:hover .x-icon::before,
+    .x-button:hover .x-icon::after {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="x-button">
+    <span class="x-icon"></span>
+  </button>
+
+</body>
+</html>
