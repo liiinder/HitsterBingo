@@ -6,24 +6,28 @@ let reset = document.querySelector('.reset-btn');
 spinBtn.onclick = function(){
     value += Math.ceil(Math.random() * 360 * 6) + 720; // minst 2 / max 8 varv
     wheel.style.transform = "rotate(" + value + "deg)";
+    spinBtn.style.background = "#fff";
     let result = value % 360;
-    switch (true) {
-        case (351 <= result || result < 63):
-            reset.innerHTML = "Nollställ bingobrädet - Rosa";
-            break;
-        case (63 <= result && result < 135):
-            reset.innerHTML = "Nollställ bingobrädet - Blå";
-            break;
-        case (135 <= result && result < 207):
-            reset.innerHTML = "Nollställ bingobrädet - Grön";
-            break;
-        case (207 <= result && result < 279):
-            reset.innerHTML = "Nollställ bingobrädet - Orange";
-            break;
-        case (279 <= result && result < 351):
-            reset.innerHTML = "Nollställ bingobrädet - Röd";
-            break;
-    }
+    setTimeout(
+        function() {
+            switch (true) {
+                case (351 <= result || result < 63): // pink
+                    spinBtn.style.background = "#ff46ed";
+                    break;
+                case (63 <= result && result < 135): // blue
+                    spinBtn.style.background = "#00ddff";
+                    break;
+                case (135 <= result && result < 207): // green
+                    spinBtn.style.background = "#00ff2e";
+                    break;
+                case (207 <= result && result < 279): // orange
+                    spinBtn.style.background = "#ff8800";
+                    break;
+                case (279 <= result && result < 351): // red
+                    spinBtn.style.background = "#ff1900";
+                    break;
+            }
+        }, 5000);
 }
 
 /*
