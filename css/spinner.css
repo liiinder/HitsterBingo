@@ -16,7 +16,8 @@ body {
 
 .container {
     margin-left: 4dvw;
-    margin-top: 6dvw;
+    margin-top: 8dvw;
+    margin-bottom: 8dvw;
     position: relative;
     width: 85dvw;
     height: 85dvw;
