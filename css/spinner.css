@@ -77,7 +77,7 @@
     height: 50%;
     transform-origin: bottom right;
     transform: rotate(calc(72deg * var(--i)));
-    clip-path: polygon(0 0, 85% 0, 100% 100%, 0 85%);
+    clip-path: polygon(0 0, 84% 0, 100% 100%, 0 84%);
     display: flex;
     justify-content: center;
     align-items: center;

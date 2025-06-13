@@ -42,7 +42,7 @@
         height: 100%;
         pointer-events: none;
         background: center/60% no-repeat;
-        background-image: url('x.svg');
+        background-image: url('/HitsterBingo/x.svg');
     }
     
     .orange { background-color: #ff8800; }
