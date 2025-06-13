@@ -6,8 +6,10 @@
     <style>
         body {
             touch-action: manipulation;
+            overscroll-behavior: none;
+
             margin: 0;
-            padding: 2dvw 2dvh;
+            padding: 0 2dvw;
             font-family: sans-serif;
             background-color: #000;
         }
@@ -15,6 +17,7 @@
         .boards-container {
             display: flex;
             flex-direction: column;
+            padding: 2dvw 0;
             gap: 6dvh;
         }
 
@@ -47,9 +50,7 @@
             height: 100%;
             pointer-events: none;
             background: center/60% no-repeat;
-            /* background-image: url('/x.svg'); */
             background-image: url('x.svg');
-            /* background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><line x1="10" y1="10" x2="90" y2="90" stroke="black" stroke-width="10dvw" stroke-linecap="round"/><line x1="90" y1="10" x2="10" y2="90" stroke="black" stroke-width="10dvw" stroke-linecap="round"/></svg>'); */
         }
 
         .orange { background-color: #ff8800; }
@@ -69,7 +70,7 @@
         }
 
         .reset-btn {
-            margin-top: 20px;
+            margin: 5dvh 0;
             padding: 10px 20px;
             width: 96dvw;
             font-size: 1rem;
