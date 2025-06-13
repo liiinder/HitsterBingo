@@ -1,0 +1,69 @@
+    body {
+        touch-action: manipulation; /* disables double click to zoom */
+        overscroll-behavior: none; /* disables pull down to update */
+        margin: 0;
+        padding: 0 2dvw;
+        font-family: sans-serif;
+        background-color: #000;
+    }
+
+    .boards-container {
+        display: flex;
+        flex-direction: column;
+        padding: 2dvw 0;
+        gap: 6dvh;
+    }
+    
+    .bingo-board {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 1dvw;
+        height: 45dvh;
+    }
+    
+    .bingo-button {
+        width: 100%;
+        height: 100%;
+        font-size: 2rem;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .bingo-button.marked::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background: center/60% no-repeat;
+        background-image: url('x.svg');
+    }
+    
+    .orange { background-color: #ff8800; }
+    .green  { background-color: #00ff2e; }
+    .pink   { background-color: #ff46ed; }
+    .blue   { background-color: #00ddff; }
+    .red    { background-color: #ff1900; }
+    
+    .orange.marked { background-color: #ff880088; }
+    .green.marked  { background-color: #00ff2e88; }
+    .pink.marked   { background-color: #ff46ed88; }
+    .blue.marked   { background-color: #00ddff88; }
+    .red.marked    { background-color: #ff190088; }
+    
+    button:focus {
+        outline: none;
+    }
+    
+    .reset-btn {
+        margin: 5dvh 0;
+        padding: 10px 20px;
+        width: 96dvw;
+        font-size: 1rem;
+    }
