@@ -2,24 +2,25 @@
         touch-action: manipulation; /* disables double click to zoom */
         overscroll-behavior: none; /* disables pull down to update */
         margin: 0;
-        padding: 0 2vw;
+        padding: 0 2dvw;
         font-family: sans-serif;
-        background-color: #000;
+        /* background-color: #000; */
+        background: #333;
     }
 
     .boards-container {
         display: flex;
         flex-direction: column;
-        padding: 2vw 0;
-        gap: 6vh;
+        padding: 2dvw 0;
+        gap: 6dvh;
     }
     
     .bingo-board {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(5, 1fr);
-        gap: 1vw;
-        height: 45vh;
+        gap: 1dvw;
+        height: 45dvh;
     }
     
     .bingo-button {
@@ -62,8 +63,8 @@
     }
     
     .reset-btn {
-        margin: 5vh 0;
+        margin: 5dvh 0;
         padding: 10px 20px;
-        width: 96vw;
+        width: 96dvw;
         font-size: 1rem;
     }
