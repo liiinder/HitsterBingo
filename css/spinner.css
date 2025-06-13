@@ -45,6 +45,8 @@ body {
     border: 0.5dvw solid rgba(0,0,0,0.75);
     cursor: pointer;
     user-select: none;
+    outline: none;
+    /* box-shadow: none; */
 }
 
 .container .spinBtn::before {
