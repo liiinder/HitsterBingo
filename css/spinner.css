@@ -24,6 +24,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
     -webkit-tap-highlight-color: transparent; /* removes the hightlighting when you click on mobile */
 }
 
@@ -83,7 +84,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    user-select: none;
     cursor: pointer;
 }
 
