@@ -24,6 +24,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-tap-highlight-color: transparent; /* removes the hightlighting when you click on mobile */
 }
 
 .container .spinBtn {
@@ -44,9 +45,6 @@ body {
     transform: rotate(270deg);
     border: 0.5dvw solid rgba(0,0,0,0.75);
     cursor: pointer;
-    user-select: none;
-    outline: none;
-    /* box-shadow: none; */
 }
 
 .container .spinBtn::before {
